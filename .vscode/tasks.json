@@ -1,0 +1,18 @@
+{
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+"version": "2.0.0",
+"tasks": [
+    {
+        "label": "wiremock",
+        "command": "java -jar D:\\Users\\yayit\\Downloads\\Mocks\\wiremock-standalone-2.7.1.jar --root-dir C:\\Proyectos\\Prueba_IBM\\prueba-angular-app\\mocks --enable-browser-proxying --port 8282 --verbose --print-all-network-traffic  --record-mappings",
+        "type": "shell",
+        "problemMatcher": []
+    },
+    {
+        "label": "wiremock-reset",
+        "command": "\"C:\\Windows\\System32\\curl.exe\" -X POST http://localhost:8282/__admin/mappings/reset",
+        "type": "shell"
+    }
+]
+}

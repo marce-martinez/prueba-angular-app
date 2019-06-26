@@ -1,0 +1,38 @@
+<div class="container">
+	<div class="d-flex justify-content-center mt-5">
+		<div class="card mt-5">
+			<div class="card-header">
+				<h3>Ingresar</h3>
+			</div>
+			<div class="card-body">
+				<form #myform="ngForm" (ngSubmit)="register(myform)" >
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						  <input id="documento" name="documento" type="text" class="form-control"
+						  placeholder="Número de documento" (focusin)="clear()" (focusout)="modelChanged()" required>
+					</div>
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+					  <input name="nombre" id="nombre" type="text" class="form-control" placeholder="Nombre" ngModel required>
+					</div>
+			
+					<div class="input-group form-group">
+					   <input id="documentoCifrado" name="documentoCifrado" type="hidden" [(ngModel)]="documentoCifrado">
+					</div>
+			
+					<div class="form-group">
+					  <input type="submit" value="Enviar" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer text-center">
+				<h4>{{ mensaje }}</h4>
+			</div>
+		</div>
+	</div>
+</div>
